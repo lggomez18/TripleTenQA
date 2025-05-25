@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "71b3aa42-19dd-4e92-880f-7e3fdadbab70",
+		"name": "TripleTen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44859964"
+	},
+	"item": [
+		{
+			"name": "Obtener una Lista de Kits en la Tarjeta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cnt-a41a7369-3d96-448b-9e96-5b0122da6698.containerhub.tripleten-services.com/api/v1/kits?cardId=1\n\n",
+					"protocol": "https",
+					"host": [
+						"cnt-a41a7369-3d96-448b-9e96-5b0122da6698",
+						"containerhub",
+						"tripleten-services",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kits"
+					],
+					"query": [
+						{
+							"key": "cardId",
+							"value": "1\n\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un kit vacio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"kit nuevo de ejemplo\",\n    \"cardId\": 1 \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cnt-bc30d7cf-d0a0-40ac-9f5b-3cbae95e7a59.containerhub.tripleten-services.com/api/v1/kits",
+					"protocol": "https",
+					"host": [
+						"cnt-bc30d7cf-d0a0-40ac-9f5b-3cbae95e7a59",
+						"containerhub",
+						"tripleten-services",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kits"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Al + espacio",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener una lista de kits con productos que pasen la condición de solicitud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ids\": [\n        1,\n        22\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cnt-99df4bc7-7ff6-4091-a43d-072e8c269251.containerhub.tripleten-services.com/api/v1/products/kits",
+					"protocol": "https",
+					"host": [
+						"cnt-99df4bc7-7ff6-4091-a43d-072e8c269251",
+						"containerhub",
+						"tripleten-services",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"kits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empezando con Postman ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.restful-api.dev/objects?id=2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"restful-api",
+						"dev"
+					],
+					"path": [
+						"objects"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trabajando con el almacen",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://cnt-bc30d7cf-d0a0-40ac-9f5b-3cbae95e7a59.containerhub.tripleten-services.com/api/v1/kits/7\n\n",
+					"protocol": "https",
+					"host": [
+						"cnt-bc30d7cf-d0a0-40ac-9f5b-3cbae95e7a59",
+						"containerhub",
+						"tripleten-services",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kits",
+						"7\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener una Lista de Productos en el Kit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_url}}/api/v1/kits/search?name=Al+espacio",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kits",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Al+espacio"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener registros del servidor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cnt-7c95a239-e838-4420-86c7-0768141c72e8.containerhub.tripleten-services.comapi/logs/main",
+					"protocol": "https",
+					"host": [
+						"cnt-7c95a239-e838-4420-86c7-0768141c72e8",
+						"containerhub",
+						"tripleten-services",
+						"comapi"
+					],
+					"path": [
+						"logs",
+						"main"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comprobar costos de envio",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Disponibilidad de Articulos en el Almacen",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"deliveryTime\": 12,\n    \"products\": [\n        {\n            \"id\": 5,\n            \"quantity\": 1\n        },\n        {\n            \"id\": 4,\n            \"quantity\": 5\n        }\n    ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cnt-459528b4-1e1e-4dc3-bb95-530bb3446cf7.containerhub.tripleten-services.com/",
+					"protocol": "https",
+					"host": [
+						"cnt-459528b4-1e1e-4dc3-bb95-530bb3446cf7",
+						"containerhub",
+						"tripleten-services",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar comestibles al kit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productsList\": [\n        {\n            \"id\": 1,\n            \"quantity\": 4\n        },\n        {\n            \"id\": 5,\n            \"quantity\": 2\n        },\n        {\n            \"id\": 3,\n            \"quantity\": 1\n        },\n        {\n            \"id\": 4,\n            \"quantity\": 1\n        },\n        {\n            \"id\":61,\n            \"quantity\":2\n        },\n        {\n            \"id\":10,\n            \"quantity\":2\n        },\n        {\n            \"id\":8,\n            \"quantity\":2\n        },\n        {\n            \"id\":3,\n            \"quantity\":2\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cnt-535c99b3-29a4-482e-adb0-75c2705814e7.containerhub.tripleten-services.com/api/v1/kits/5/products",
+					"protocol": "https",
+					"host": [
+						"cnt-535c99b3-29a4-482e-adb0-75c2705814e7",
+						"containerhub",
+						"tripleten-services",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kits",
+						"5",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos los kits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_url}}/api/v1/kits?cardId=2",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kits"
+					],
+					"query": [
+						{
+							"key": "cardId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
